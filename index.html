@@ -25,6 +25,43 @@
       margin: 0 auto;
     }
 
+    /* شعار مركزي جذاب بالأيقونات */
+    .logo {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+
+    .logo-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      background: rgba(20, 20, 20, 0.85);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 210, 0, 0.4);
+      box-shadow: 0 5px 20px rgba(255, 210, 0, 0.15);
+      gap: 10px;
+      color: #fff;
+    }
+
+    .logo-icon {
+      font-size: 1.3rem;
+      color: #ffd700;
+    }
+
+    .logo-text {
+      margin-right: 8px;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    .logo-title {
+      font-size: 1.4rem;
+      color: #ffd700;
+      margin-top: 6px;
+    }
+
     /* زر اللغة في الأعلى */
     .lang-bar {
       text-align: right;
@@ -125,6 +162,24 @@
   </style>
 </head>
 <body>
+  <!-- الشعار المركزي بأيقونات الكاميرا، التنصيص، الفرشاة، الفأرة -->
+  <div class="logo">
+    <div class="logo-box">
+      <span class="logo-icon">📷</span>
+      <span class="logo-text">كاميرة</span>
+
+      <span class="logo-icon">""</span>
+      <span class="logo-text">كود</span>
+
+      <span class="logo-icon">🖌️</span>
+      <span class="logo-text">فرشاة</span>
+
+      <span class="logo-icon">🖱️</span>
+      <span class="logo-text">فأرة</span>
+    </div>
+    <div class="logo-title">أحمد – بورتفوليو</div>
+  </div>
+
   <!-- زر تغيير اللغة -->
   <div class="lang-bar">
     <button class="lang-btn active" onclick="setLang('ar')">العربية</button>
@@ -205,7 +260,7 @@
         },
         skills: {
           title: "المهارات التقنية",
-          s1: "HTML, CSS, JavaScript – بناء واجهات وеб سريعة وبسيطة",
+          s1: "HTML, CSS, JavaScript – بناء واجهات ويب سريعة وبسيطة",
           s2: "Python – برمجة بسيطة لخدمات وتطبيقات وبوتات",
           s3: "UX/UI Design – تصميم واجهات سهلة الاستخدام لهواتف وويب",
           s4: "تصميم لوجوه وشعارات – هوية بصرية للشركات",
