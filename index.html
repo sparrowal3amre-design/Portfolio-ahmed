@@ -2,21 +2,21 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>أحمد العامري – بورتفوليو احترافي</title>
+  <title>Alamre – بورتفوليو احترافي</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
     :root {
-      /* لوحة ألوان احترافية: ذهبي مطفي + أسود فحم + رمادي تقني */
-      --primary: #FFC107; /* ذهبي دافئ واحترافي */
-      --primary-hover: #FFB300;
-      --bg-dark: #0F0F0F; /* أسود فحمي مريح للعين */
-      --card-bg: rgba(30, 30, 30, 0.7); /* خلفية بطاقات زجاجية أغمق قليلاً */
-      --text-main: #FFFFFF;
-      --text-muted: #BDBDBD;
-      --border-color: rgba(255, 193, 7, 0.2);
+      /* لوحة الألوان الجديدة: أزرق سماوي + أخضر حيوي + أسود عميق */
+      --primary: #00d2ff; /* أزرق سماوي مضيء */
+      --secondary: #00ff88; /* أخضر نعناعي تقني */
+      --bg-dark: #0a0c10; /* أسود كحلي عميق */
+      --card-bg: rgba(20, 25, 35, 0.8);
+      --text-main: #f0f2f5;
+      --text-muted: #94a3b8;
+      --accent-gradient: linear-gradient(135deg, #00d2ff 0%, #00ff88 100%);
     }
 
     * {
@@ -24,14 +24,14 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Tajawal', sans-serif;
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     body {
       background-color: var(--bg-dark);
       background-image: 
-        radial-gradient(circle at 10% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(255, 193, 7, 0.05) 0%, transparent 20%);
+        radial-gradient(circle at 0% 0%, rgba(0, 210, 255, 0.08) 0%, transparent 30%),
+        radial-gradient(circle at 100% 100%, rgba(0, 255, 136, 0.08) 0%, transparent 30%);
       color: var(--text-main);
       line-height: 1.6;
       padding: 20px;
@@ -40,7 +40,7 @@
 
     .container { max-width: 950px; margin: 0 auto; }
 
-    /* الشعار الموحد */
+    /* الشعار الموحد بنسخة Alamre */
     .brand-section {
       text-align: center;
       margin-bottom: 50px;
@@ -53,43 +53,42 @@
       height: 120px;
       margin: 0 auto 20px;
       background: var(--card-bg);
-      border: 2px solid var(--primary);
-      border-radius: 24px;
+      border: 2px solid transparent;
+      background-image: linear-gradient(var(--card-bg), var(--card-bg)), var(--accent-gradient);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      border-radius: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 25px rgba(255, 193, 7, 0.1);
-      transform: rotate(-5deg);
-    }
-
-    .unified-logo:hover {
-      transform: rotate(0deg) scale(1.05);
-      border-color: var(--primary-hover);
+      box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15);
     }
 
     .logo-icons-container {
       position: relative;
       font-size: 1.8rem;
-      color: var(--primary);
     }
 
     .central-code {
       font-weight: 700;
       font-size: 2.2rem;
-      letter-spacing: -2px;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .sub-icon {
       position: absolute;
       font-size: 0.9rem;
-      background: #1a1a1a;
+      background: #1e293b;
       width: 32px;
       height: 32px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      border: 1px solid rgba(0, 210, 255, 0.3);
+      color: var(--secondary);
     }
 
     .ic-camera { top: -45px; left: 50%; transform: translateX(-50%); }
@@ -97,54 +96,77 @@
     .ic-mouse { top: 50%; left: -45px; transform: translateY(-50%); }
 
     .logo-title { 
-      font-size: 2.4rem; 
-      color: var(--primary); 
-      font-weight: 700;
+      font-size: 2.6rem; 
+      font-weight: 800;
       margin-top: 15px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(0, 210, 255, 0.2));
     }
 
     /* شريط اللغة */
     .lang-bar { text-align: center; margin-bottom: 30px; }
     .lang-btn {
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border-color);
-      padding: 7px 22px;
-      border-radius: 8px;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      padding: 7px 24px;
+      border-radius: 12px;
       color: var(--text-muted);
       cursor: pointer;
       margin: 0 5px;
       font-weight: 500;
     }
     .lang-btn.active { 
-      background: var(--primary); 
+      background: var(--accent-gradient);
       color: #000; 
-      border-color: var(--primary); 
-      box-shadow: 0 4px 12px rgba(255, 193, 7, 0.2);
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
     }
 
     /* البطاقات الزجاجية */
     .glass-card {
       background: var(--card-bg);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      border: 1px solid var(--border-color);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
       padding: 35px;
       margin-bottom: 25px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     }
 
-    h2 { color: var(--primary); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; font-size: 1.5rem; }
+    h2 { 
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 25px; 
+      display: flex; 
+      align-items: center; 
+      gap: 12px; 
+      font-size: 1.6rem; 
+    }
     
     .project-item {
         background: rgba(255, 255, 255, 0.02);
         padding: 25px;
-        border-radius: 12px;
+        border-radius: 16px;
         margin-bottom: 20px;
         border-right: 4px solid var(--primary);
+        position: relative;
     }
     [dir="ltr"] .project-item { border-right: none; border-left: 4px solid var(--primary); }
+    
+    /* جعل الحدود تتلون بالأخضر في الأسفل كديكور */
+    .project-item::after {
+        content: '';
+        position: absolute;
+        bottom: 0; right: 0;
+        width: 40px; height: 4px;
+        background: var(--secondary);
+        border-radius: 4px 0 0 4px;
+    }
 
-    .project-item h3 { margin-bottom: 10px; color: #fff; }
+    .project-item h3 { margin-bottom: 10px; color: var(--primary); }
 
     .skills-grid {
       display: grid;
@@ -152,36 +174,25 @@
       gap: 15px;
     }
     .skill-card {
-      background: rgba(0, 0, 0, 0.2);
-      padding: 18px;
-      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.5);
+      padding: 20px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       gap: 12px;
-      border: 1px solid transparent;
+      border: 1px solid rgba(0, 210, 255, 0.1);
     }
     .skill-card:hover { 
-      border-color: var(--primary); 
-      background: rgba(255, 193, 7, 0.05);
-      transform: translateY(-5px);
+      border-color: var(--secondary); 
+      background: rgba(0, 255, 136, 0.05);
+      transform: translateY(-5px) scale(1.02);
     }
-    .skill-card i { color: var(--primary); font-size: 1.3rem; }
+    .skill-card i { color: var(--secondary); font-size: 1.4rem; }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 32px;
-      background: var(--primary);
-      color: #000;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
-      margin-top: 15px;
-    }
-    .btn:hover { background: var(--primary-hover); box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3); }
+    footer { text-align: center; padding: 50px 0; color: #475569; font-size: 0.9rem; letter-spacing: 0.5px; }
 
-    footer { text-align: center; padding: 40px 0; color: #666; font-size: 0.9rem; letter-spacing: 1px; }
+    /* إزالة الأنماط القديمة للزر */
+    .btn { display: none; }
   </style>
 </head>
 <body>
@@ -195,7 +206,7 @@
         <div class="sub-icon ic-mouse"><i class="fas fa-mouse"></i></div>
       </div>
     </div>
-    <div class="logo-title" id="main-name">أحمد – بورتفوليو</div>
+    <div class="logo-title" id="main-name">Alamre – بورتفوليو</div>
   </div>
 
   <div class="lang-bar">
@@ -205,27 +216,26 @@
 
   <div class="container">
     <section class="glass-card">
-      <h1 id="h-name" style="color: var(--primary); font-size: 2.5rem; margin-bottom: 5px;">أحمد</h1>
-      <p id="h-title" style="color: #fff; margin-bottom: 15px; font-weight: 500; font-size: 1.2rem;"></p>
-      <p id="h-desc" style="color: var(--text-muted);"></p>
-      <a href="#" class="btn" id="h-btn"><i class="fas fa-cloud-download-alt"></i> <span></span></a>
+      <h1 id="h-name" style="font-size: 2.8rem; margin-bottom: 5px; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Alamre</h1>
+      <p id="h-title" style="color: var(--secondary); margin-bottom: 15px; font-weight: 500; font-size: 1.3rem;"></p>
+      <p id="h-desc" style="color: var(--text-muted); font-size: 1.1rem;"></p>
     </section>
 
     <section class="glass-card">
-      <h2 id="p-title"><i class="fas fa-layer-group"></i> <span></span></h2>
+      <h2 id="p-title"><i class="fas fa-project-diagram"></i> <span></span></h2>
       <div id="projects-list"></div>
     </section>
 
     <section class="glass-card">
-      <h2 id="s-title"><i class="fas fa-terminal"></i> <span></span></h2>
+      <h2 id="s-title"><i class="fas fa-microchip"></i> <span></span></h2>
       <div class="skills-grid" id="skills-grid"></div>
     </section>
 
     <section class="glass-card">
-      <h2 id="c-title"><i class="fas fa-comments"></i> <span></span></h2>
-      <p id="c-desc" style="margin-bottom: 15px;"></p>
-      <a href="mailto:ahmedegili77@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: 500; border-bottom: 1px dashed var(--primary);">
-        <i class="fas fa-envelope-open-text"></i> ahmedegili77@gmail.com
+      <h2 id="c-title"><i class="fas fa-link"></i> <span></span></h2>
+      <p id="c-desc" style="margin-bottom: 15px; color: var(--text-muted);"></p>
+      <a href="mailto:ahmedegili77@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 1.1rem; border-bottom: 2px solid var(--secondary); padding-bottom: 4px;">
+        <i class="fas fa-envelope"></i> ahmedegili77@gmail.com
       </a>
     </section>
 
@@ -236,51 +246,51 @@
     const content = {
       ar: {
         dir: "rtl",
-        logoTitle: "أحمد – بورتفوليو",
-        home: { name: "أحمد", title: "مطور برمجيات وشبكات • مصمم UI/UX", desc: "خبير في تطويع التقنية لخدمة احتياجاتك، من إدارة الشبكات المتقدمة إلى بناء واجهات رقمية تلفت الأنظار.", btn: "تحميل السيرة الذاتية" },
+        logoTitle: "Alamre – بورتفوليو",
+        home: { name: "Alamre", title: "خبير نظم برمجية وشبكات • مصمم UI/UX", desc: "متخصص في ابتكار الحلول التقنية المتقدمة وأتمتة الأنظمة المعقدة، مع لمسة فنية تضمن تجربة مستخدم استثنائية." },
         projects: {
-          title: "المشاريع الرئيسية",
+          title: "المشاريع المميزة",
           items: [
             { h: "أتمتة شبكات الميكروتك", p: "بناء أنظمة لتوليد القسائم وإدارة المستخدمين بشكل منظم وجيد." },
             { h: "صنع بوتات مخصصة", p: "صنع بوتات تقوم بمهام معينة حسب رغبتك، مع حلول برمجية مخصصة لأتمتة المهام الإدارية والتفاعل التلقائي." },
-            { h: "هندسة الواجهات (UI/UX)", p: "تصميم تجارب مستخدم تدمج بين الجمالية الرقمية وسهولة التصفح." }
+            { h: "الابتكار البصري (Design)", p: "تحويل المتطلبات التقنية إلى واجهات بصرية جذابة تعمل بكفاءة عالية." }
           ]
         },
         skills: [
-          { n: "Web Technologies", i: "fab fa-html5" },
-          { n: "Python Master", i: "fab fa-python" },
-          { n: "UX/UI Strategy", i: "fas fa-drafting-compass" },
-          { n: "Mikrotik Expert", i: "fas fa-network-wired" },
-          { n: "Visual Branding", i: "fas fa-pen-fancy" },
-          { n: "Network Security", i: "fas fa-shield-alt" }
+          { n: "Web Systems", i: "fas fa-code" },
+          { n: "Python Automation", i: "fab fa-python" },
+          { n: "UI/UX Architecture", i: "fas fa-vector-square" },
+          { n: "Mikrotik Control", i: "fas fa-network-wired" },
+          { n: "Graphic Brand", i: "fas fa-fill-drip" },
+          { n: "Cyber Security", i: "fas fa-user-shield" }
         ],
-        skillsTitle: "القدرات التقنية",
-        contact: { title: "تواصل معي", desc: "دعنا نناقش فكرتك القادمة ونحولها إلى نظام يعمل بكفاءة:" },
-        footer: "© 2026 أحمد – التميز في الكود والتصميم"
+        skillsTitle: "المعايير التقنية",
+        contact: { title: "التواصل المباشر", desc: "مستعد لتحويل رؤيتك إلى واقع تقني ملموس:" },
+        footer: "© 2026 Alamre – حيث يلتقي الذكاء البرمجي بالإبداع البصري"
       },
       en: {
         dir: "ltr",
-        logoTitle: "Ahmed – Portfolio",
-        home: { name: "Ahmed", title: "Dev & Networks • UI/UX Designer", desc: "Expert in tailoring technology to your needs, from advanced network management to building eye-catching digital interfaces.", btn: "Download CV" },
+        logoTitle: "Alamre – Portfolio",
+        home: { name: "Alamre", title: "Software & Network Expert • UI/UX Designer", desc: "Specializing in innovative technical solutions and complex system automation, with an artistic touch for exceptional UX." },
         projects: {
-          title: "Key Projects",
+          title: "Featured Projects",
           items: [
             { h: "Mikrotik Automation", p: "Building systems for voucher generation and user management in an organized and efficient manner." },
             { h: "Custom Bot Creation", p: "Crafting bots that perform specific tasks according to your desire, with custom software solutions for admin automation." },
-            { h: "Interface Engineering", p: "Designing user experiences that merge digital aesthetics with ease of navigation." }
+            { h: "Visual Innovation (Design)", p: "Transforming technical requirements into attractive, high-performance visual interfaces." }
           ]
         },
         skills: [
-          { n: "Web Technologies", i: "fab fa-html5" },
-          { n: "Python Master", i: "fab fa-python" },
-          { n: "UX/UI Strategy", i: "fas fa-drafting-compass" },
-          { n: "Mikrotik Expert", i: "fas fa-network-wired" },
-          { n: "Visual Branding", i: "fas fa-pen-fancy" },
-          { n: "Network Security", i: "fas fa-shield-alt" }
+          { n: "Web Systems", i: "fas fa-code" },
+          { n: "Python Automation", i: "fab fa-python" },
+          { n: "UI/UX Architecture", i: "fas fa-vector-square" },
+          { n: "Mikrotik Control", i: "fas fa-network-wired" },
+          { n: "Graphic Brand", i: "fas fa-fill-drip" },
+          { n: "Cyber Security", i: "fas fa-user-shield" }
         ],
-        skillsTitle: "Technical Skills",
-        contact: { title: "Get in Touch", desc: "Let's discuss your next idea and turn it into an efficient system:" },
-        footer: "© 2026 Ahmed – Excellence in Code & Design"
+        skillsTitle: "Technical Standards",
+        contact: { title: "Direct Contact", desc: "Ready to turn your vision into a tangible technical reality:" },
+        footer: "© 2026 Alamre – Where Programming Intelligence Meets Visual Creativity"
       }
     };
 
@@ -296,7 +306,6 @@
       document.getElementById('h-name').textContent = d.home.name;
       document.getElementById('h-title').textContent = d.home.title;
       document.getElementById('h-desc').textContent = d.home.desc;
-      document.getElementById('h-btn').querySelector('span').textContent = d.home.btn;
 
       document.getElementById('p-title').querySelector('span').textContent = d.projects.title;
       document.getElementById('projects-list').innerHTML = d.projects.items.map(item => `
