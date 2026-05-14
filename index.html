@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>أحمد – بورتفوليو</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(ellipse at center, #000000, #111111);
+      color: #eee;
+      font-family: system-ui, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* شريط اللغة أعلى الصفحة */
+    .lang-bar {
+      text-align: right;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+
+    .lang-btn {
+      background: rgba(255, 210, 0, 0.3);
+      border: 1px solid rgba(255, 210, 0, 0.5);
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: #fff;
+      margin-left: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .lang-btn.active {
+      background: rgba(255, 210, 0, 0.6);
+    }
+
+    /* تأثير زجاجي أسود مع لمسة صفراء */
+    .glass-card {
+      background: rgba(20, 20, 20, 0.7);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 210, 0, 0.2);
+      padding: 24px;
+      margin-bottom: 24px;
+      color: #fff;
+    }
+
+    .glass-card h1, .glass-card h2, .glass-card h3 {
+      color: #ffd700;
+      margin-bottom: 12px;
+    }
+
+    .glass-card p {
+      color: #ccc;
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 20px;
+      background: rgba(255, 210, 0, 0.3);
+      color: #fff;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 210, 0, 0.5);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: rgba(255, 210, 0, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .skills-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .skill {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255, 210, 0, 0.2);
+      color: #ddd;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- تبديل اللغة -->
+  <div class="lang-bar">
+    <button class="lang-btn active" onclick="setLang('ar')">العربية</button>
+    <button class="lang-btn"      onclick="setLang('en')">English</button>
+  </div>
+
+  <div class="container">
+
+    <!-- الصفحة الرئيسية -->
+    <div class="glass-card" style="text-align: center; padding: 36px;" id="home">
+      <h1>أحمد</h1>
+      <p>مطور وشبكات • مصمم UX/UI وجرافيك</p>
+      <p>خبرة في HTML, CSS, JavaScript, Python، وتصميم لوجوه وشبكات Mikrotik وRuijie</p>
+      <a href="cv.pdf" class="btn">تحميل السيرة الذاتية</a>
+    </div>
+
+    <!-- المشاريع الرئيسية -->
+    <div class="glass-card" id="projects">
+      <h2>أهم المشاريع</h2>
+      <div class="skills-list">
+        <div class="project">
+          <h3>شبكة مقهى إنترنت مع قسائم تيليجرام</h3>
+          <p>تنفيذ شبكة كاملة باستخدام Mikrotik + Antenat، مع إنشاء قسائم اتصال يتم توليدها عبر بوت تيليجرام وإدارتها من لوحة بسيطة.</p>
+        </div>
+
+        <div class="project">
+          <h3>سيرفر محلّي على Termux مع PHP</h3>
+          <p>تطبيق ويب بسيط يعمل مباشرة على أندرويد باستخدام Termux وPHP server.</p>
+        </div>
+
+        <div class="project">
+          <h3>لوحة تحكم بسيطة لشبكات ميكروتك (UX/UI)</h3>
+          <p>تصميم واجهة بسيطة للمستخدمين النهائيين لتفعيل الإنترنت، تنظيم القسائم، وسهولة الاستخدام.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- المهارات -->
+    <div class="glass-card" id="skills">
+      <h2>المهارات التقنية</h2>
+      <div class="skills-list">
+        <div class="skill">HTML, CSS, JavaScript – بناء واجهات ويب سريعة وبسيطة</div>
+        <div class="skill">Python – برمجة بسيطة لخدمات وتطبيقات وبوتات</div>
+        <div class="skill">UX/UI Design – تصميم واجهات سهلة الاستخدام لهواتف وويب</div>
+        <div class="skill">تصميم لوجوه وشعارات – هوية بصرية للشركات</div>
+        <div class="skill">تصميم بطاقات عمل وـ Letterhead للشركات</div>
+        <div class="skill">Mikrotik RouterOS – إدارة شبكات/WiFi/VPN/Hotspot</div>
+        <div class="skill">Ruijie, Antennat – تنفيذ شبكات محلات ومقاهي وكافيهات</div>
+      </div>
+    </div>
+
+    <!-- التواصل -->
+    <div class="glass-card" id="contact">
+      <h2>التواصل</h2>
+      <p>يمكنك التواصل معي عبر البريد أو واتساب / تيليجرام:</p>
+      <p>البريد: <a href="mailto:ahmedegili77@gmail.com">ahmedegili77@gmail.com</a></p>
+    </div>
+
+    <footer style="text-align: center; margin-top: 20px; color: #666; font-size: 0.85rem;">
+      © 2026 أحمد – بورتفوليو زجاجي أسود بتصميم أنيق 🪶
+    </footer>
+
+  </div>
+
+  <script>
+    const texts = {
+      ar: {
+        home: {
+          name: "أحمد",
+          title: "مطور وشبكات • مصمم UX/UI وجرافيك",
+          desc: "خبرة في HTML, CSS, JavaScript, Python، وتصميم لوجوه وشبكات Mikrotik وRuijie",
+          btn: "تحميل السيرة الذاتية"
+        },
+        projects: {
+          title: "أهم المشاريع",
+          p1: "شبكة مقهى إنترنت مع قسائم تيليجرام",
+          d1: "تنفيذ شبكة كاملة باستخدام Mikrotik + Antenat، مع إنشاء قسائم اتصال يتم توليدها عبر بوت تيليجرام وإدارتها من لوحة بسيطة.",
+          p2: "سيرفر محلّي على Termux مع PHP",
+          d2: "تطبيق ويب بسيط يعمل مباشرة على أندرويد باستخدام Termux وPHP server.",
+          p3: "لوحة تحكم بسيطة لشبكات ميكروتك (UX/UI)",
+          d3: "تصميم واجهة بسيطة للمستخدمين النهائيين لتفعيل الإنترنت، تنظيم القسائم، وسهولة الاستخدام."
+        },
+        skills: {
+          title: "المهارات التقنية",
+          s1: "HTML, CSS, JavaScript – بناء واجهات ويب سريعة وبسيطة",
+          s2: "Python – برمجة بسيطة لخدمات وتطبيقات وبوتات",
+          s3: "UX/UI Design – تصميم واجهات سهلة الاستخدام لهواتف وويب",
+          s4: "تصميم لوجوه وشعارات – هوية بصرية للشركات",
+          s5: "تصميم بطاقات عمل وـ Letterhead للشركات",
+          s6: "Mikrotik RouterOS – إدارة شبكات/WiFi/VPN/Hotspot",
+          s7: "Ruijie, Antennat – تنفيذ شبكات محلات ومقاهي وكافيهات"
+        },
+        contact: {
+          title: "التواصل",
+          mail: "البريد: ahmedegili77@gmail.com",
+          hint: "يمكنك التواصل معي عبر البريد أو واتساب / تيليجرام:"
+        }
+      },
+      en: {
+        home: {
+          name: "Ahmed",
+          title: "Developer & Network Engineer • UX/UI & Graphic Designer",
+          desc: "Experience with HTML, CSS, JavaScript, Python, logo design, and Mikrotik & Ruijie networks",
+          btn: "Download CV"
+        },
+        projects: {
+          title: "Main Projects",
+          p1: "Internet Café Network with Telegram Vouchers",
+          d1: "Built a full network using Mikrotik + Antenat, with connection vouchers generated via a Telegram bot and managed from a simple dashboard.",
+          p2: "Local Server on Termux with PHP",
+          d2: "A simple web app running directly on Android using Termux and a PHP server.",
+          p3: "Simple Mikrotik Dashboard for Users (UX/UI)",
+          d3: "Designed a simple interface for end users to activate internet, manage vouchers, and improve usability."
+        },
+        skills: {
+          title: "Technical Skills",
+          s1: "HTML, CSS, JavaScript – Build fast and simple web interfaces",
+          s2: "Python – Simple programming for services, apps, and bots",
+          s3: "UX/UI Design – Design easy‑to‑use mobile & web UIs",
+          s4: "Logo & Branding – Visual identity for companies",
+          s5: "Business cards & Letterhead design",
+          s6: "Mikrotik RouterOS – Manage networks, WiFi, VPN, Hotspot",
+          s7: "Ruijie, Antenat – Networks for shops, cafés, and internet centers"
+        },
+        contact: {
+          title: "Contact",
+          mail: "Email: ahmedegili77@gmail.com",
+          hint: "You can contact me via email or WhatsApp / Telegram:"
+        }
+      }
+    };
+
+    function setLang(lang) {
+      const doc = document;
+
+      doc.documentElement.lang = lang;
+
+      doc.querySelectorAll(".lang-btn").forEach(b => {
+        b.classList.toggle("active", b.textContent.toLowerCase() === (lang === "ar" ? "العربية" : "english"));
+      });
+
+      const home   = doc.getElementById("home");
+      const projects = doc.getElementById("projects");
+      const skills = doc.getElementById("skills");
+      const contact = doc.getElementById("contact");
+
+      const t = texts[lang];
+
+      // الصفحة الرئيسية
+      home.querySelector("h1").textContent = t.home.name;
+      home.querySelector("p:nth-of-type(1)").textContent = t.home.title;
+      home.querySelector("p:nth-of-type(2)").textContent = t.home.desc;
+      home.querySelector(".btn").textContent = t.home.btn;
+
+      // المشاريع
+      projects.querySelector("h2").textContent = t.projects.title;
+      const projs = projects.querySelectorAll(".project");
+      projs[0].querySelector("h3").textContent = t.projects.p1;
+      projs[0].querySelector("p").textContent = t.projects.d1;
+      projs[1].querySelector("h3").textContent = t.projects.p2;
+      projs[1].querySelector("p").textContent = t.projects.d2;
+      projs[2].querySelector("h3").textContent = t.projects.p3;
+      projs[2].querySelector("p").textContent = t.projects.d3;
+
+      // المهارات
+      skills.querySelector("h2").textContent = t.skills.title;
+      const skl = skills.querySelectorAll(".skill");
+      skl[0].textContent = t.skills.s1;
+      skl[1].textContent = t.skills.s2;
+      skl[2].textContent = t.skills.s3;
+      skl[3].textContent = t.skills.s4;
+      skl[4].textContent = t.skills.s5;
+      skl[5].textContent = t.skills.s6;
+      skl[6].textContent = t.skills.s7;
+
+      // التواصل
+      contact.querySelector("h2").textContent = t.contact.title;
+      contact.querySelector("p:nth-of-type(1)").textContent = t.contact.hint;
+      contact.querySelector("p:nth-of-type(2)").textContent = t.contact.mail;
+    }
+
+    // تفعيل اللغة العربية افتراضيًا
+    setLang("ar");
+  </script>
+</body>
+</html>
